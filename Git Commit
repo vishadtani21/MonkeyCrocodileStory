@@ -1,0 +1,365 @@
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~
+$ mkdir story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~
+$ cd story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story
+$ vi characters
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story
+$ vi characters
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story
+$ vi story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story
+$ ls
+characters  story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story
+$ git init
+Initialized empty Git repository in C:/Users/ASUS/story/.git/
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        characters
+        story
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git add characters story
+warning: LF will be replaced by CRLF in characters.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in story.
+The file will have its original line endings in your working directory
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   characters
+        new file:   story
+
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git commit -m "Add characters and settings for the story"
+[master (root-commit) 4085f63] Add characters and settings for the story
+ 2 files changed, 9 insertions(+)
+ create mode 100644 characters
+ create mode 100644 story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ vi story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   story
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git add story
+warning: LF will be replaced by CRLF in story.
+The file will have its original line endings in your working directory
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   story
+
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git diff --staged
+diff --git a/story b/story
+index eb7398a..9eccb43 100644
+--- a/story
++++ b/story
+@@ -2,3 +2,5 @@
+ **story**
+
+ Once upon a time, there used to live a monkey who used to eat the berries from the tree. There was a crocodile and hi
++One day, the crocodile came to the bank of the river.:wq
++
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git diff
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git commi -m "Added the plot of the story"
+git: 'commi' is not a git command. See 'git --help'.
+
+The most similar commands are
+        commit
+        column
+        config
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git commit -m "added the plot of the story"
+[master 94ed32c] added the plot of the story
+ 1 file changed, 2 insertions(+)
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git diff --staged
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git log
+commit 94ed32cbc277d7413a5d0f22652d48f39b07daa4 (HEAD -> master)
+Author: vishadtani21 <vishadtani21@gmail.com>
+Date:   Sun Jul 4 20:30:31 2021 +0530
+
+    added the plot of the story
+
+commit 4085f6330a3de3476b5da73796ad0fd78c326b98
+Author: vishadtani21 <vishadtani21@gmail.com>
+Date:   Sun Jul 4 20:25:21 2021 +0530
+
+    Add characters and settings for the story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ ^C
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git checkout 4085f
+Note: switching to '4085f'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 4085f63 Add characters and settings for the story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story ((4085f63...))
+$ vi story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story ((4085f63...))
+$ git branch "flip the story"
+fatal: 'flip the story' is not a valid branch name.
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story ((4085f63...))
+$ git branch "flipTheStory"
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story ((4085f63...))
+$ git branch
+* (HEAD detached at 4085f63)
+  flipTheStory
+  master
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story ((4085f63...))
+$ vi story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story ((4085f63...))
+$ git checkout flipTheStory
+Switched to branch 'flipTheStory'
+M       story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (flipTheStory)
+$ git branch
+* flipTheStory
+  master
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (flipTheStory)
+$ git log
+commit 4085f6330a3de3476b5da73796ad0fd78c326b98 (HEAD -> flipTheStory)
+Author: vishadtani21 <vishadtani21@gmail.com>
+Date:   Sun Jul 4 20:25:21 2021 +0530
+
+    Add characters and settings for the story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (flipTheStory)
+$ vi story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (flipTheStory)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        story
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (flipTheStory)
+$ git status
+On branch flipTheStory
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   story
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (flipTheStory)
+$ git add story
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (flipTheStory)
+$ git commit -m "I have flipped the story"
+[flipTheStory 45db2d7] I have flipped the story
+ 1 file changed, 1 insertion(+)
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (flipTheStory)
+$ git branch
+* flipTheStory
+  master
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (flipTheStory)
+$ git checkout master
+Switched to branch 'master'
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git branch
+  flipTheStory
+* master
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git diff master filpTheStory
+fatal: ambiguous argument 'filpTheStory': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git diff master flipTheStory
+diff --git a/story b/story
+index 9eccb43..e182ce8 100644
+--- a/story
++++ b/story
+@@ -2,5 +2,4 @@
+ **story**
+
+ Once upon a time, there used to live a monkey who used to eat the berries from the tree. There was a crocodile and hi
+-One day, the crocodile came to the bank of the river.:wq
+-
++One day, the crocodile came to visit the mokey
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git remote add origin https://github.com/vishadtani21/MonkeyCrocodileStory.git
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 706 bytes | 353.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/vishadtani21/MonkeyCrocodileStory.git
+ * [new branch]      master -> master
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ git pull origin master
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.34 KiB | 24.00 KiB/s, done.
+From https://github.com/vishadtani21/MonkeyCrocodileStory
+ * branch            master     -> FETCH_HEAD
+   94ed32c..3b24ae2  master     -> origin/master
+Updating 94ed32c..3b24ae2
+Fast-forward
+ characters | 1 +
+ 1 file changed, 1 insertion(+)
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ vi characters
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/story (master)
+$ cd ..
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~
+$ mkdir MC
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~
+$ cd MC
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/MC
+$ git clone https://github.com/vishadtani21/Monkey-Chunky.git
+Cloning into 'Monkey-Chunky'...
+remote: Enumerating objects: 37, done.
+remote: Total 37 (delta 0), reused 0 (delta 0), pack-reused 37
+Receiving objects: 100% (37/37), 22.63 KiB | 5.66 MiB/s, done.
+Resolving deltas: 100% (15/15), done.
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/MC
+$ ls
+Monkey-Chunky/
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/MC
+$ cd Monkey-Chunky
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/MC/Monkey-Chunky (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   App.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/MC/Monkey-Chunky (master)
+$ git add App.js
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/MC/Monkey-Chunky (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   App.js
+
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/MC/Monkey-Chunky (master)
+$ git commit -m "Modified App.js"
+[master 0a5bbf0] Modified App.js
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/MC/Monkey-Chunky (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ASUS@LAPTOP-9UM6U4A1 MINGW64 ~/MC/Monkey-Chunky (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 365 bytes | 365.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/vishadtani21/Monkey-Chunky.git
+   1e83a07..0a5bbf0  master -> master
+
